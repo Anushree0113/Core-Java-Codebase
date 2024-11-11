@@ -1,4 +1,4 @@
-package GneralQuestion;
+package BinarySearchQuestions;
 
 public class FindFirstAndLastOccurrence {
     public static void main(String[] args) {
