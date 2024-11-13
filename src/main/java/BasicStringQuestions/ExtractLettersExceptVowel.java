@@ -1,10 +1,10 @@
-package StringQuestions;
+package BasicStringQuestions;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static StringQuestions.CountVowelsInString.isVowel;
+import static BasicStringQuestions.CountVowelsInString.isVowel;
 
 public class ExtractLettersExceptVowel {
     public static void main(String[] args) {
