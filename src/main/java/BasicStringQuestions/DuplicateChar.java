@@ -23,7 +23,7 @@ class Pair {
     }
 
 
-    public class DuplicateCharString {
+    public static class DuplicateCharString {
 
         private static ArrayList<Pair> duplicate_char(String str, int n) {
             int[] frequencyArray = new int[26];
