@@ -1,8 +1,6 @@
 package BasicStringQuestions;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 class Pair {
     char alphabet;
@@ -16,7 +14,7 @@ class Pair {
     public static void main(String[] args) {
         String str = "APPLE";
         int n = str.length();
-        ArrayList<Pair> map = DuplicateChar.duplicate_char(str, n);
+        ArrayList<Pair> map = DuplicateCharString.duplicate_char(str, n);
         for (Pair pair : map) {
             System.out.print(pair.alphabet + " " + pair.count + " ");
 
@@ -25,7 +23,7 @@ class Pair {
     }
 
 
-    public class DuplicateChar {
+    public class DuplicateCharString {
 
         private static ArrayList<Pair> duplicate_char(String str, int n) {
             int[] frequencyArray = new int[26];
