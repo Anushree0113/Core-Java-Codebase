@@ -14,9 +14,9 @@ public class ContainsDuplicate {
 
         for (int val : nums) {
             if (seen.contains(val)) {
-                return true;  // Found a duplicate
+                return true;
             }
-            seen.add(val);  // Add the current value to the set
+            seen.add(val);
         }
 
         return false;
