@@ -9,6 +9,10 @@ public class Counter {
     private int count;
 
     public synchronized void increment() {
+
+        /*synchronized (this) {
+            count++;
+        }*/
         count++;
     }
 
