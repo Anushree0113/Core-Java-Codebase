@@ -2,11 +2,11 @@ package Thread;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        BankAccount sbi = new BankAccount();
+        SelfLock selfLock = new SelfLock();
         Runnable task = new Runnable() {
             @Override
             public void run() {
-                sbi.withdraw(50);
+                selfLock.withdraw(50);
             }
         };
         Thread t1 = new Thread(task, "thread-1");
