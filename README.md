@@ -1,6 +1,6 @@
 # :writing_hand: Java - Interview Preparation : 2024
 
-#This repository contains a collection of Java code solutions and algorithms designed to help prepare for technical interviews in 2024. It includes practice problems, data structures, and algorithms commonly asked in coding interviews, along with detailed explanations and optimized solutions.
+This repository contains a collection of Java code solutions and algorithms designed to help prepare for technical interviews in 2024. It includes practice problems, data structures, and algorithms commonly asked in coding interviews, along with detailed explanations and optimized solutions.
 
 # :technologist: Topics Covered
 - **Core Java**: Fundamental concepts of Java programming, including syntax, data types, control structures, and exception handling.
