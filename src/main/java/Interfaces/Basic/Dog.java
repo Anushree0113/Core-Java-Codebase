@@ -1,4 +1,4 @@
-package Interfaces;
+package Interfaces.Basic;
 
 public class Dog implements Animal {
 
