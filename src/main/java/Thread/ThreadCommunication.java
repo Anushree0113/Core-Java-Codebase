@@ -2,11 +2,15 @@ package Thread;
 
 class SharedResource {
 
-    private int value;
+    public int getData() {
+        return data;
+    }
+
+    private int data;
 
     private boolean hasData;
 
-    public synchronized void Produce(int value) {
+    public synchronized void Produce(int data) {
         while (hasData) {
             try {
                 wait();
@@ -14,12 +18,12 @@ class SharedResource {
                 Thread.currentThread().interrupt();
             }
         }
-        this.value = value;
+        this.data = data;
         hasData = true;
         notify();
     }
 
-    public synchronized int Consume(int value) {
+    public synchronized int Consume(int data) {
         if (!hasData) {
             try {
                 wait();
@@ -29,7 +33,7 @@ class SharedResource {
         }
         hasData = false;
         notify();
-        return value;
+        return data;
     }
 }
 
@@ -43,10 +47,9 @@ class Producer implements Runnable {
 
     @Override
     public void run() {
-
         for (int i = 0; i < 10; i++) {
             sharedResource.Produce(i);
-            System.out.println("Produced = " + i);
+            System.out.println("Produced " + sharedResource.getData());
         }
 
     }
@@ -64,7 +67,7 @@ class Consumer implements Runnable {
     public void run() {
         for (int i = 0; i < 10; i++) {
             sharedResource.Consume(i);
-            System.out.println("Consume = " + i);
+            System.out.println("Consumed " + sharedResource.getData());
         }
     }
 }
