@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MinimumSizeSubArray {
     public static void main(String[] args) {
-        int[] nums = {1,1,1,1,1,1,1,1};
+        int[] nums = {1, 1, 1, 1, 1, 1, 1, 1};
         int target = 11;
         int len = minSubArrayLen(target, nums);
         System.out.println("len = " + len);
@@ -24,23 +24,22 @@ public class MinimumSizeSubArray {
                         sum += nums[j];
                     } else if (sum + nums[j] == target) {
                         list.add(j - i + 1);
-                        sum = 0 ;
+                        sum = 0;
                         break;
                     } else {
                         sum = 0;
                         break;
                     }
-                    if(list.isEmpty() && sum < target && j == nums.length - 1){
-                        return 0 ;
+                    if (list.isEmpty() && sum < target && j == nums.length - 1) {
+                        return 0;
                     }
                 }
             }
 
-
         }
 
         int min = Integer.MAX_VALUE;
-        if(list.isEmpty()){
+        if (list.isEmpty()) {
             return 0;
         }
         for (int val : list) {
