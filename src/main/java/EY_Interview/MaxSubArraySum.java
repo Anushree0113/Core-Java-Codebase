@@ -2,7 +2,7 @@ package EY_Interview;
 
 public class MaxSubArraySum {
     public static void main(String[] args) {
-        int[] arr = {2, 3, -8, 7, -1, 2, 3};
+        int[] arr = {-2,-4,-6};
         int sum = getMaxSum(arr);
         System.out.println("Maximum sum possible: " + sum);
     }
