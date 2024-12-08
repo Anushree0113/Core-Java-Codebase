@@ -1,0 +1,30 @@
+package EY_Interview;
+
+import java.util.PriorityQueue;
+
+public class KthMaxElement {
+    public static void main(String[] args) {
+        int[] nums = {17, 7, 2, 30, 21};
+        int k = 2;
+
+        int element = findKthMaxElement(nums, k);
+        System.out.println("element = " + element);
+
+    }
+
+    private static int findKthMaxElement(int[] nums, int k) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> b - a);
+        for (int i = 0; i < nums.length; i++) {
+            pq.add(nums[i]);
+        }
+
+        int f = k - 1;
+
+        while (f > 0) {
+            pq.remove();
+            f--;
+        }
+
+        return pq.peek();
+    }
+}
